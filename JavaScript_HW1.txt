@@ -89,4 +89,99 @@ else { "Technical work" }
     let age_minimum=18;
     let age_maximum=60;
     if(age < age_minimum){
+console.log("You don’t have access cause your age is", age, "It’s less then", age_minimum)
+    }
+    else if(age >= age_minimum && age < age_maximum) {
+        console.log("Welcome!")
+    }
+    else if(age > age_maximum){
+        console.log("Keep calm and look Culture channel")
+    }
+    else{"Technical work"}
+    }
+checkAge(17);
+checkAge(18);
+checkAge(61);
+
+2*:
+Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
+const checkAge = function(age){
+    let age_minimum=18;
+    let age_maximum=60;
+    if(typeof age !== "number"){
+        console.log("Error!")
+    }
+    else{
+        if(age < age_minimum){
+            console.log("You don’t have access cause your age is", age, "It’s less then", age_minimum)
+        }
+        else if(age >= age_minimum && age < age_maximum) {
+            console.log("Welcome!")
+        }
+        else if(age > age_maximum){
+            console.log("Keep calm and look Culture channel")
+        }
+        else{"Technical work"}
+        }
+    }
+checkAge(17);
+checkAge(18);
+checkAge(61);
+checkAge("12");
+
+
+3**:
+Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
+
+const checkAge = function(age){
+    let age_minimum=18;
+    let age_maximum=60;
+    if(Number.isNaN(Number(age)) || !age){
+        console.log("Error!")
+    }
+    else{
+        if(age < age_minimum){
+            console.log("You don’t have access cause your age is", age, "It’s less then", age_minimum)
+        }
+        else if(age >= age_minimum && age < age_maximum) {
+            console.log("Welcome!")
+        }
+        else if(age > age_maximum){
+            console.log("Keep calm and look Culture channel")
+        }
+        else{"Technical work"}
+        }
+    }
+checkAge(55);
+checkAge("17");
+checkAge("18");
+checkAge("61");
+checkAge("number")
+checkAge("");
+
+
+
+4***:
+Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
+
+const checkAge = function(age){
+    let age_minimum=18;
+    let age_maximum=60;
+    if(age.trim() == "" || Number.isNaN(Number(age))){
+        alert("Error!")
+    }
+    else{
+        if(age < age_minimum){
+            alert("You don’t have access cause your age is", age, "It’s less then", age_minimum)
+        }
+        else if(age >= age_minimum && age < age_maximum) {
+            alert("Welcome!")
+        }
+        else if(age > age_maximum){
+            alert("Keep calm and look Culture channel")
+        }
+        else{"Technical work"}
+        }
+    }
+checkAge(prompt("Введите возраст"))
 
